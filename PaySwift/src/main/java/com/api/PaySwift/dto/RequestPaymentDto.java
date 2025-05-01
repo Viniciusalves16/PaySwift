@@ -1,6 +1,7 @@
 package com.api.PaySwift.dto;
 
 import com.api.PaySwift.enumeration.PaymentTypeEnum;
+import jakarta.validation.Valid;
 import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;
@@ -10,7 +11,7 @@ import java.math.BigDecimal;
 
 public record RequestPaymentDto(@NotNull PaymentTypeEnum paymentType,
                                 @NotNull BigDecimal value,
-                                @NotNull ClientDetails clientDetails) {
+                               @Valid @NotNull ClientDetails clientDetails) {
 
     public record ClientDetails(
             @Pattern(regexp = "^[A-ZÀ-ÿ][A-Za-zÀ-ÿ'\\s]{1,49}$", message = "Name Invalid ")

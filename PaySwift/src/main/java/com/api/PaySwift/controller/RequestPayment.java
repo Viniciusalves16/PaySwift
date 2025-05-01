@@ -21,7 +21,7 @@ public class RequestPayment {
     private PaymentIntegrationService integrationService;
 
     @PostMapping("/payments")
-    public ResponseEntity effectivePayment(@Valid @RequestBody RequestPaymentDto dto) {
+    public ResponseEntity effectivePayment(@RequestBody @Valid RequestPaymentDto dto) {
         var response = this.integrationService.intregationPayment(dto);
 
         return ResponseEntity.ok().body("Payment processed");
