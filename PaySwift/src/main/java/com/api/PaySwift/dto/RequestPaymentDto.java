@@ -10,7 +10,7 @@ import java.math.BigDecimal;
 
 public record RequestPaymentDto(@NotNull PaymentTypeEnum paymentType,
                                 @NotNull BigDecimal value,
-                                @NotBlank ClientDetails clientDetails) {
+                                @NotNull ClientDetails clientDetails) {
 
     public record ClientDetails(
             @Pattern(regexp = "^[A-ZÀ-ÿ][A-Za-zÀ-ÿ'\\s]{1,49}$", message = "Name Invalid ")
