@@ -1,0 +1,5 @@
+springdoc:
+  api-docs:
+    path: /v3/api-docs # Default path for OpenAPI 3.0 spec.  Important!
+  swagger-ui:
+    path: /swagger-ui.html
