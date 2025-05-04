@@ -20,14 +20,9 @@ public class UserModel implements UserDetails {
     @GeneratedValue(strategy = GenerationType.UUID)
     @Column(name = "user_id")
     private String userId;
-
     @Column(unique = true)
     private String login;
-
     private String password;
-
-    // Criando relacionamento entre usuario e roles
-
     private RoleEnum role;
 
 
