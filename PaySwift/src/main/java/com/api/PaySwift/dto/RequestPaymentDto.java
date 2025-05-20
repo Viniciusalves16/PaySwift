@@ -2,23 +2,26 @@ package com.api.PaySwift.dto;
 
 import com.api.PaySwift.enumeration.PaymentTypeEnum;
 import jakarta.validation.Valid;
-import jakarta.validation.constraints.Email;
-import jakarta.validation.constraints.NotBlank;
-import jakarta.validation.constraints.NotNull;
-import jakarta.validation.constraints.Pattern;
+import jakarta.validation.constraints.*;
 
 import java.math.BigDecimal;
 
-public record RequestPaymentDto(@NotNull PaymentTypeEnum paymentType,
-                                @NotNull BigDecimal value,
-                               @Valid @NotNull ClientDetails clientDetails) {
+public record RequestPaymentDto(
+        @NotNull PaymentTypeEnum paymentType,
+        @NotNull BigDecimal value,
+        @Valid @NotNull ClientDetails clientDetails) {
 
     public record ClientDetails(
-            @Pattern(regexp = "^[A-ZÀ-ÿ][A-Za-zÀ-ÿ'\\s]{1,49}$", message = "Name Invalid ")
+            @Pattern(regexp = "^[A-ZÀ-ÿ][A-Za-zÀ-ÿ'\\s]{1,49}$", message = "Name Invalid")
             String name,
+
             @Pattern(regexp = "\\d{11}", message = "Document Invalid")
             String document,
+
             @Email(message = "Email Invalid")
-            String email) {
+            String email,
+
+            @NotBlank(message = "Password cannot be blank")
+            String password) {
     }
 }
