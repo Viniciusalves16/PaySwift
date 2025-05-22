@@ -27,7 +27,7 @@ public class RequestPayment {
     @PostMapping("/payments")
     public ResponseEntity<Object> effectivePayment(@RequestBody @Valid RequestPaymentDto dto) {
 
-        return  integrationService.integrationPaymentService (dto.clientDetails().name());
+        return  integrationService.integrationPaymentService (dto);
     }
 
 
