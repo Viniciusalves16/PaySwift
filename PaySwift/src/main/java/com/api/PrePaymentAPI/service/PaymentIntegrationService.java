@@ -10,6 +10,7 @@ import org.springframework.kafka.core.KafkaTemplate;
 import org.springframework.stereotype.Service;
 
 import java.util.Random;
+import java.util.UUID;
 
 @Service
 public class PaymentIntegrationService {
@@ -27,9 +28,10 @@ public class PaymentIntegrationService {
         if (this.userRepository.findByLogin(request.clientDetails().name()) == null)
             return ResponseEntity.badRequest().build();
 
-        Random random = new Random();
+        UUID paymentId = UUID.randomUUID();
+        String id = paymentId.toString();
 
-        RequestTopicPayment requestTopicPayment = new RequestTopicPayment(random.nextInt(), request.value(), request.paymentType().toString(), request.clientDetails().name());
+        RequestTopicPayment requestTopicPayment = new RequestTopicPayment(id, request.value(), request.paymentType().toString(), request.clientDetails().name());
         this.ProducerPaymentTopic(requestTopicPayment);
 
 

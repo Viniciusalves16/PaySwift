@@ -11,7 +11,7 @@ import java.math.BigDecimal;
 @NoArgsConstructor
 public class RequestTopicPayment {
 
-    private Integer paymentId;
+    private String paymentId;
     private BigDecimal amount;
     private String paymentMethod;
     private String clientName;
