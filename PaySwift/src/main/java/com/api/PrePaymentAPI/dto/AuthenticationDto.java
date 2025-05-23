@@ -1,4 +1,4 @@
-package com.api.PaySwift.dto;
+package com.api.PrePaymentAPI.dto;
 
 public record AuthenticationDto(String login, String password) {
 }

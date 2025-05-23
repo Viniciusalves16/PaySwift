@@ -1,6 +1,6 @@
-package com.api.PaySwift.dto;
+package com.api.PrePaymentAPI.dto;
 
-import com.api.PaySwift.enumeration.PaymentTypeEnum;
+import com.api.PrePaymentAPI.enumeration.PaymentTypeEnum;
 import jakarta.validation.Valid;
 import jakarta.validation.constraints.*;
 

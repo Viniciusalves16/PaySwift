@@ -6,7 +6,7 @@ springdoc:
     
 spring:
   application:
-    name: PaySwift
+    name: Pre-Payment API
   datasource:
     url: ${SPRING_DATASOURCE_URL}
     username: ${SPRING_DATASOURCE_USERNAME}
@@ -29,7 +29,7 @@ server:
       key-serializer: org.apache.kafka.common.serialization.StringSerializer
       value-serializer: org.apache.kafka.common.serialization.StringSerializer
 api:
-  PaySwift:
+  PrePaymentAPI:
     security:
       token:
         secret: ${SECRET_TOKEN}

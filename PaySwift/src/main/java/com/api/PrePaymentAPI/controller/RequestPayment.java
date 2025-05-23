@@ -1,12 +1,10 @@
-package com.api.PaySwift.controller;
+package com.api.PrePaymentAPI.controller;
 
-import com.api.PaySwift.dto.RequestPaymentDto;
-import com.api.PaySwift.repository.UserRepository;
-import com.api.PaySwift.service.PaymentIntegrationService;
+import com.api.PrePaymentAPI.dto.RequestPaymentDto;
+import com.api.PrePaymentAPI.service.PaymentIntegrationService;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.tags.Tag;
 import jakarta.validation.Valid;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;

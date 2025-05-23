@@ -1,7 +1,7 @@
-package com.api.PaySwift.entity;
+package com.api.PrePaymentAPI.entity;
 
 
-import com.api.PaySwift.enumeration.RoleEnum;
+import com.api.PrePaymentAPI.enumeration.RoleEnum;
 import jakarta.persistence.*;
 import lombok.Data;
 import org.springframework.security.core.GrantedAuthority;

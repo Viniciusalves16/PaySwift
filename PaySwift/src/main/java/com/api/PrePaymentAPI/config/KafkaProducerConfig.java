@@ -1,4 +1,4 @@
-package com.api.PaySwift.config;
+package com.api.PrePaymentAPI.config;
 
 import org.apache.kafka.clients.producer.ProducerConfig;
 import org.apache.kafka.common.serialization.StringSerializer;

@@ -1,6 +1,6 @@
-package com.api.PaySwift.security;
+package com.api.PrePaymentAPI.security;
 
-import com.api.PaySwift.repository.UserRepository;
+import com.api.PrePaymentAPI.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;

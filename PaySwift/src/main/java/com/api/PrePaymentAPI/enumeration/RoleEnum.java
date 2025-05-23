@@ -1,4 +1,4 @@
-package com.api.PaySwift.enumeration;
+package com.api.PrePaymentAPI.enumeration;
 
 public enum RoleEnum {
 

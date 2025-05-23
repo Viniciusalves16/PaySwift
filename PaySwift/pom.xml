@@ -9,10 +9,10 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>com.api</groupId>
-    <artifactId>PaySwift</artifactId>
+    <artifactId>Pre-Payment API</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>PaySwift</name>
-    <description>PaySwift is a fast and secure payment management platform built with Spring Boot and Java 17.
+    <name>Pre-Payment API</name>
+    <description>Pre-Payment API is a fast and secure payment management platform built with Spring Boot and Java 17.
         It offers seamless payment processing, real-time notifications, and efficient reporting capabilities.
         Utilizing advanced technologies like Kafka for event-driven architecture, Redis for caching,
         and multi-threading for optimized performance, PaySwift ensures a smooth and scalable payment experience.

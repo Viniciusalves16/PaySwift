@@ -1,6 +1,6 @@
-package com.api.PaySwift.security;
+package com.api.PrePaymentAPI.security;
 
-import com.api.PaySwift.repository.UserRepository;
+import com.api.PrePaymentAPI.repository.UserRepository;
 import jakarta.servlet.FilterChain;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.http.HttpServletRequest;

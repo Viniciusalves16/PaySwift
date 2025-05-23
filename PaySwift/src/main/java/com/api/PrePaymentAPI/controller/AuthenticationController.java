@@ -1,11 +1,11 @@
-package com.api.PaySwift.controller;
+package com.api.PrePaymentAPI.controller;
 
-import com.api.PaySwift.dto.AuthenticationDto;
-import com.api.PaySwift.dto.LoginRespondeDto;
-import com.api.PaySwift.dto.RegisterLoginDto;
-import com.api.PaySwift.entity.UserModel;
-import com.api.PaySwift.repository.UserRepository;
-import com.api.PaySwift.security.TokenService;
+import com.api.PrePaymentAPI.dto.AuthenticationDto;
+import com.api.PrePaymentAPI.dto.LoginRespondeDto;
+import com.api.PrePaymentAPI.dto.RegisterLoginDto;
+import com.api.PrePaymentAPI.entity.UserModel;
+import com.api.PrePaymentAPI.repository.UserRepository;
+import com.api.PrePaymentAPI.security.TokenService;
 import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;

@@ -1,6 +1,6 @@
-package com.api.PaySwift.security;
+package com.api.PrePaymentAPI.security;
 
-import com.api.PaySwift.entity.UserModel;
+import com.api.PrePaymentAPI.entity.UserModel;
 import com.auth0.jwt.JWT;
 import com.auth0.jwt.algorithms.Algorithm;
 import com.auth0.jwt.exceptions.JWTCreationException;
@@ -16,7 +16,7 @@ import java.time.ZoneOffset;
 @Service
 public class TokenService {
 
-    @Value("${api.PaySwift.security.token.secret}")
+    @Value("${api.PrePaymentAPI.security.token.secret}")
     private String secret;
 
     public String generateToken(UserModel userModel) {

@@ -1,6 +1,6 @@
-package com.api.PaySwift.repository;
+package com.api.PrePaymentAPI.repository;
 
-import com.api.PaySwift.entity.UserModel;
+import com.api.PrePaymentAPI.entity.UserModel;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.stereotype.Repository;

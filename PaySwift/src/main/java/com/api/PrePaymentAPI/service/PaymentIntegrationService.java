@@ -1,14 +1,11 @@
-package com.api.PaySwift.service;
+package com.api.PrePaymentAPI.service;
 
-import com.api.PaySwift.controller.RequestPayment;
-import com.api.PaySwift.dto.RequestPaymentDto;
-import com.api.PaySwift.repository.UserRepository;
+import com.api.PrePaymentAPI.dto.RequestPaymentDto;
+import com.api.PrePaymentAPI.repository.UserRepository;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.kafka.core.KafkaTemplate;
-import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.stereotype.Service;
-import org.springframework.web.client.RestTemplate;
 
 @Service
 public class PaymentIntegrationService {
