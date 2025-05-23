@@ -12,7 +12,7 @@ import org.springframework.context.annotation.Configuration;
                 title = "Api Swagger Test",
                 description = "Projeto exemplo swagger",
                 version = "1.0.0",
-                contact = @Contact(name = "Nithack", email = "nithack@nithack.com"),
+                contact = @Contact(name = "Vinicius Alves ", email = "vinicius.alves16@outlook.com"),
                 license = @License(name = "Apache License Version 2.0", url = "https://www.apache.org/licenses/LICENSE-2.0")
         )
 )
