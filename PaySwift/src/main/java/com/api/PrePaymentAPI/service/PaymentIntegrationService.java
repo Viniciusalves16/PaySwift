@@ -1,11 +1,14 @@
 package com.api.PrePaymentAPI.service;
 
 import com.api.PrePaymentAPI.dto.RequestPaymentDto;
+import com.api.PrePaymentAPI.dto.RequestTopicPayment;
 import com.api.PrePaymentAPI.repository.UserRepository;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.kafka.core.KafkaTemplate;
 import org.springframework.stereotype.Service;
+
+import java.util.Random;
 
 @Service
 public class PaymentIntegrationService {
@@ -23,12 +26,15 @@ public class PaymentIntegrationService {
         if (this.userRepository.findByLogin(request.clientDetails().name()) == null)
             return ResponseEntity.badRequest().build();
 
-        this.ProducerPaymentTopic(request);
+        Random random = new Random();
+
+        RequestTopicPayment requestTopicPayment = new RequestTopicPayment(random.nextInt(), request.value(), request.paymentType().toString(), request.clientDetails().name());
+        this.ProducerPaymentTopic(requestTopicPayment);
 
         return ResponseEntity.ok(HttpStatus.CREATED);
     }
 
-    public Object ProducerPaymentTopic(RequestPaymentDto request){
+    public Object ProducerPaymentTopic(RequestTopicPayment request){
         return kafkaTemplate.send("Payment_Topic", String.valueOf(request));
 
     }
