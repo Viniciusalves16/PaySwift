@@ -8,6 +8,7 @@ import java.math.BigDecimal;
 
 public record RequestPaymentDto(
         @NotNull PaymentTypeEnum paymentType,
+        @Positive
         @NotNull BigDecimal value,
         @Valid @NotNull ClientDetails clientDetails) {
 
