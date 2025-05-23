@@ -1,5 +1,6 @@
 package com.api.PrePaymentAPI.service;
 
+import com.api.PrePaymentAPI.dto.PaymentResponseDTO;
 import com.api.PrePaymentAPI.dto.RequestPaymentDto;
 import com.api.PrePaymentAPI.dto.RequestTopicPayment;
 import com.api.PrePaymentAPI.repository.UserRepository;
@@ -31,7 +32,8 @@ public class PaymentIntegrationService {
         RequestTopicPayment requestTopicPayment = new RequestTopicPayment(random.nextInt(), request.value(), request.paymentType().toString(), request.clientDetails().name());
         this.ProducerPaymentTopic(requestTopicPayment);
 
-        return ResponseEntity.ok(HttpStatus.CREATED);
+
+        return ResponseEntity.accepted().body(new PaymentResponseDTO(String.valueOf(requestTopicPayment.getPaymentId()), "PENDING"));
     }
 
     public Object ProducerPaymentTopic(RequestTopicPayment request){
