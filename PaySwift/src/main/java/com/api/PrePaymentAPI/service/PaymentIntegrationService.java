@@ -13,10 +13,10 @@ import java.util.UUID;
 @Service
 public class PaymentIntegrationService {
 
-    private final  KafkaTemplate <String, String>kafkaTemplate;
+    private final  KafkaTemplate <String, RequestTopicPayment>kafkaTemplate;
     private final  UserRepository userRepository;
 
-    public PaymentIntegrationService(KafkaTemplate<String, String> kafkaTemplate, UserRepository userRepository) {
+    public PaymentIntegrationService(KafkaTemplate<String, RequestTopicPayment> kafkaTemplate, UserRepository userRepository) {
         this.kafkaTemplate = kafkaTemplate;
         this.userRepository = userRepository;
     }
@@ -33,11 +33,11 @@ public class PaymentIntegrationService {
         this.sendPaymentToTopic(requestTopicPayment);
 
 
-        return ResponseEntity.accepted().body(new PaymentResponseDTO(String.valueOf(requestTopicPayment.getPaymentId()), "PENDING"));
+        return ResponseEntity.accepted().body(new PaymentResponseDTO(requestTopicPayment.getPaymentId(), "PENDING"));
     }
 
     public Object sendPaymentToTopic(RequestTopicPayment request){
-        return kafkaTemplate.send("Payment_Topic", String.valueOf(request));
+        return kafkaTemplate.send("Payment_Topic", request);
 
     }
 }
