@@ -12,6 +12,7 @@ import java.util.UUID;
 
 @Service
 public class PaymentIntegrationService {
+// This service handles the integration with the payment system by sending payment requests to a Kafka topic.
 
     private final  KafkaTemplate <String, RequestTopicPayment>kafkaTemplate;
     private final  UserRepository userRepository;

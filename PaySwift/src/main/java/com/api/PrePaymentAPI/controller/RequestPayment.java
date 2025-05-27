@@ -13,6 +13,7 @@ import org.springframework.web.bind.annotation.RestController;
 @Tag(name = "Payments", description = "operations relationated payments")
 @RestController
 public class RequestPayment {
+// This controller handles payment requests and integrates with the payment service.
 
 
     private PaymentIntegrationService integrationService;

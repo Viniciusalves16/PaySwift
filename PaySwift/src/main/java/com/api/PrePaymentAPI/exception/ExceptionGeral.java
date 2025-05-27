@@ -10,6 +10,7 @@ import org.springframework.web.bind.annotation.RestControllerAdvice;
 
 @RestControllerAdvice
 public class ExceptionGeral {
+    // This class handles global exceptions in the application, providing custom error responses for validation errors and entity not found exceptions.
 
     @ExceptionHandler(MethodArgumentNotValidException.class)
     public ResponseEntity badRequest400(MethodArgumentNotValidException exception) {

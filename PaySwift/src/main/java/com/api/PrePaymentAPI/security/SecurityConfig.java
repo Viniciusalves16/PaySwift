@@ -17,6 +17,7 @@ import org.springframework.security.web.authentication.UsernamePasswordAuthentic
 @Configuration
 @EnableWebSecurity
 public class SecurityConfig {
+// This configuration class sets up security for the application, including authentication and authorization rules.
 
     @Autowired
     private SecurityFilter securityFilter;

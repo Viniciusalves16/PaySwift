@@ -8,9 +8,10 @@ import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.stereotype.Service;
 
 
-//Toda vez que a app receber um requisiçao, essa classe realiza a busca na base de dados
+
 @Service
 public class AuthenticationService implements UserDetailsService {
+    // This service implements UserDetailsService to load user details by username for authentication purposes.
 
     @Autowired
     private UserRepository userRepository;

@@ -17,6 +17,7 @@ import java.io.IOException;
 // classe que valida se o toke esta sendo enviado
 @Component
 public class SecurityFilter extends OncePerRequestFilter {
+// This filter checks for the presence of a valid token in the request header and sets the authentication context accordingly.
 
     @Autowired
     private TokenService tokenService;

@@ -14,7 +14,7 @@ import java.util.Map;
 
 @Configuration
 public class KafkaProducerConfig {
-
+// This configuration class sets up the Kafka producer factory and Kafka template for sending messages to a Kafka topic.
     @Bean
     public ProducerFactory<String, RequestTopicPayment> producerFactory() {
         Map<String, Object> configProps = new HashMap<>();

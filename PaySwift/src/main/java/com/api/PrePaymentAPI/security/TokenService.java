@@ -15,6 +15,7 @@ import java.time.ZoneOffset;
 //Classe que faz a criação do token
 @Service
 public class TokenService {
+// This service generates and validates JWT tokens for user authentication in the application.
 
     @Value("${api.PrePaymentAPI.security.token.secret}")
     private String secret;
