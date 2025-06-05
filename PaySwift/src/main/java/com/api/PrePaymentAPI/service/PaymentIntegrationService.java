@@ -30,7 +30,7 @@ public class PaymentIntegrationService {
         UUID paymentId = UUID.randomUUID();
         String id = paymentId.toString();
 
-        RequestTopicPayment requestTopicPayment = new RequestTopicPayment(id, request.value(), request.paymentType().toString(), request.clientDetails().name());
+        RequestTopicPayment requestTopicPayment = new RequestTopicPayment(id, request.value(), request.paymentType().toString(), request.clientDetails().name(), request.clientDetails().email());
         this.sendPaymentToTopic(requestTopicPayment);
 
 

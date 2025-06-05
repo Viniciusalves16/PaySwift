@@ -15,4 +15,5 @@ public class RequestTopicPayment {
     private BigDecimal amount;
     private String paymentMethod;
     private String clientName;
+    private String email;
 }
